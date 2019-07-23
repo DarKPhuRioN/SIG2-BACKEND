@@ -17,7 +17,7 @@ export class LocationController
       .message('OK')
       .json(
         {
-          data: await this.locationService.getProperty()
+          data: await this.locationService.getLimits(limit)
         }
       )
     ; 
