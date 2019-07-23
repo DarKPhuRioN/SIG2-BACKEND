@@ -1,11 +1,14 @@
 import { Injectable, Inject} from '@nestjs/common';
 
 @Injectable()
-export class DataBaseService{
+export class DataBaseService
+{
+
   constructor(@Inject('dbconnection') private readonly postgresql){
   }
 
-  public Query(sqlSentence) {
+  public Query(sqlSentence) 
+  {
     return new Promise((resolve, reject) => {
       this.postgresql.query(
         sqlSentence,
